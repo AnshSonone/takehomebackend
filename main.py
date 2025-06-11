@@ -36,16 +36,16 @@ fake_users_db = []
 
 @app.post("/register", response_model=response_model)
 def register_user(user: UserModel):
-    # Check for existing username or email
+    
     if any(u["username"] == user.username for u in fake_users_db):
         raise HTTPException(status_code=400, detail="Username already registered")
     if any(u["email"] == user.email for u in fake_users_db):
         raise HTTPException(status_code=400, detail="Email already registered")
 
-    # Hash password
+    
     hashed_password = pwd_context.hash(user.password)
 
-    # Store user
+    
     fake_users_db.append({
         "username": user.username,
         "email": user.email,
