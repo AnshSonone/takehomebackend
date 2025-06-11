@@ -111,11 +111,15 @@ dist/
 4. Stage and Commit Your Code
 
 command: git add .
-git commit -m "Initial commit - FastAPI + Angular project"
+command: git commit -m "Initial commit - FastAPI + Angular project"
+
+
 5. Push to GitHub
 
 command: git branch -M main
+
 command: git remote add origin https://github.com/YOUR_USERNAME/takehome-fullstack.git
+
 command: git push -u origin main
 
 
